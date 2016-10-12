@@ -1,5 +1,6 @@
 var City = require('./../js/city.js').cityModule;
 var Quake = require('./../js/earthquake.js').quakeModule;
+var Xml = require('./../js/xml.js').xmlModule;
 
 var displayQuake = function(place, magnitude, display) {
   $('#output-quake').text("The probability of an " + magnitude + " magnitude earthquake happening in" + place + " is " + display + "%.");
