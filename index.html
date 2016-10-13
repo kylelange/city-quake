@@ -5,27 +5,29 @@
     <link rel="stylesheet" href="build/css/styles.css">
     <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
-    <title>City Quake</title>
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,700" rel="stylesheet">
+    <title>City Disasters</title>
   </head>
   <body>
     <div class="container">
-      <h1 class="well">City Quake</h1>
+      <h1 class="well">City Disasters</h1>
         <div class="row">
-          <div class="col-sm-4">
-            <form id="city-form">
-              <label for="place">Enter your beginning location:</label>
-              <input id="place" class="form-control" placeholder="City" required>
-              <label for="magnitude">Enter a number on the Richter Scale(0.0 to 10.0):</label>
-              <input id="magnitude" class="form-control" placeholder="0.0 - 10.0" required>
-              <button type="submit" class="btn btn-default">Submit Route</button>
-            </form>
+          <div class="col-md-3">
+
           </div>
-          <div class="col-sm-4">
+          <div class="col-md-6">
+            <h2>Search for any recent disasters that have befallen your fair municipality. </h2>
+            <form id="city-form">
+              <label for="place">Enter a location:</label>
+              <input id="place" class="form-control" placeholder="City" required>
+              <button type="submit" class="btn btn-default">Submit Location</button>
+            </form>
             <h2 id="output-county"></h2>
             <h2 id="output-lat-long"></h2>
-            <h2 id="output-quake"></h2>
+            <h2 id="disasterHeader">Here are the most recent disasters that have happened: </h2>
+            <ul id="output-quake"></ul>
           </div>
-          <div class="col-sm-4">
+          <div class="col-md-3">
 
           </div>
       </div>

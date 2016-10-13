@@ -1,1 +1,67 @@
+body {
+  background: url("../../img/dark.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+}
 
+h1 {
+  color: #fff;
+  font-family: 'Cormorant Garamond', sans-serif;
+  font-weight: bold;
+  font-size: 3em;
+  letter-spacing: 0.02em;
+}
+
+label {
+  color: #2F1626;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  // letter-spacing: 0.1em;
+  font-size: 2em;
+  font-family: 'Cormorant Garamond', sans-serif;
+}
+
+input {
+  margin-bottom: 20px;
+  border-color: #2F1626;
+}
+
+input::-webkit-input-placeholder {
+   color: #2F1626 !important;
+}
+
+button {
+  margin-left: 72%;
+}
+
+h2, li {
+  color: #2B1F27;
+  font-family: 'Cormorant Garamond', sans-serif;
+}
+
+li {
+  font-size: 1.5em;
+  padding-bottom: 10px;
+}
+
+.btn {
+  background-color: #2F1626;
+  border: none;
+  color: #fff;
+  font-family: 'Cormorant Garamond', sans-serif;
+  font-size: 1.3em;
+}
+
+.well {
+  background-color: #3A4842;
+}
+
+.col-md-6 {
+  background-color: rgba(117, 134, 126, 0.7);
+  margin-top: 50px;
+  border-radius: 2%;
+}
+
+#disasterHeader {
+  display: none;
+}
