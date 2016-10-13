@@ -2,8 +2,8 @@ var City = require('./../js/city.js').cityModule;
 function Quake() {
 }
 
-Quake.prototype.getInfo = function(lat, lng, displayNature){
-  $.get('http://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&&starttime=2016-01-01&endtime=2016-10-13&latitude=' + lat + '&longitude=' + lng + '&maxradiuskm=50&limit=50').then(function(response) {
+Quake.prototype.getInfo = function(startYear, startMonth, endYear, endMonth, lat, lng, mag, displayNature){
+  $.get('http://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&&starttime='startYear'-'startMonth'-01&endtime='endYear'-'endMonth'-13&latitude=' + lat + '&longitude=' + lng + '&maxradiuskm=50' + '&limit=50&minmagnitude=' + mag).then(function(response) {
     console.log(response);
     if(response.features.length === 0) {
       $("#output-quake").append("<li>There are no disasters in your area.</li>");
@@ -16,7 +16,6 @@ Quake.prototype.getInfo = function(lat, lng, displayNature){
     $("#output-quake").text(error.jsonerror);
   });
 };
-
 
 exports.quakeModule = Quake;
 

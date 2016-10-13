@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="well">City Disasters</h1>
+      <h1 class="well">City Disasters (U.S. Edition)</h1>
         <div class="row">
           <div class="col-md-3">
 
@@ -18,8 +18,18 @@
           <div class="col-md-6">
             <h2>Search for any recent disasters that have befallen your fair municipality. </h2>
             <form id="city-form">
-              <label for="place">Enter a location:</label>
-              <input id="place" class="form-control" placeholder="City" required>
+              <label for="place">Enter a Location:</label>
+              <input type="text" id="place" class="form-control" placeholder="City" required>
+              <label for="mag">Enter a Minimum Magnitude:</label>
+              <input type="number" id="mag" class="form-control" placeholder="1.0 - 10.0" required>
+              <label for="start-year">Enter a Starting Year:</label>
+              <input type="number" id="start-year" class="form-control" placeholder="example: 1989" required>
+              <label for="start-month">Enter a Starting Month:</label>
+              <input type="number" id="start-month" class="form-control" placeholder="example: 04" required>
+              <label for="end-year">Enter a Final Year:</label>
+              <input type="number" id="end-year" class="form-control" placeholder="example: 2016" required>
+              <label for="end-month">Enter a Final Month:</label>
+              <input type="number" id="end-month" class="form-control" placeholder="example: 08" required>
               <button type="submit" class="btn btn-default">Submit Location</button>
             </form>
             <h2 id="output-county"></h2>

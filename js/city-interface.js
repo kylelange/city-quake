@@ -19,6 +19,7 @@ $(document).ready(function(){
     var newCity = new City();
     var newQuake = new Quake();
     var place = $('#place').val();
+    var mag = $('#mag').val();
     newCity.getLatLong(place, displayLatLong);
     setTimeout(function() {
       var lat = newCity.lat;
@@ -26,7 +27,7 @@ $(document).ready(function(){
       console.log("lat lng of submit event: " + lat + " " + lng);
       $('#disasterHeader').show();
       newCity.getLocation(place, displayFunction);
-      newQuake.getInfo(lat, lng, displayNature);
+      newQuake.getInfo(lat, lng, mag, displayNature);
     }, 1000);
   });
 });
