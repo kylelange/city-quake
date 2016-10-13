@@ -7,7 +7,7 @@ var displayFunction = function(place, display) {
 
 var displayNature = function(lat, lng, type, mag, area) {
   $('#output-quake').append("<li>" + type + " that had a magnitude of " + mag  + " at " + area + ".</li>");
-}
+};
 
 var displayLatLong = function(place, lat, lng) {
 };
@@ -20,6 +20,10 @@ $(document).ready(function(){
     var newQuake = new Quake();
     var place = $('#place').val();
     var mag = $('#mag').val();
+    var startYear = $('#start-year').val();
+    var startMonth = $('#start-month').val();
+    var endYear = $('#end-year').val();
+    var endMonth = $('#end-month').val();
     newCity.getLatLong(place, displayLatLong);
     setTimeout(function() {
       var lat = newCity.lat;
@@ -27,7 +31,7 @@ $(document).ready(function(){
       console.log("lat lng of submit event: " + lat + " " + lng);
       $('#disasterHeader').show();
       newCity.getLocation(place, displayFunction);
-      newQuake.getInfo(lat, lng, mag, displayNature);
-    }, 1000);
+      newQuake.getInfo(lat, lng, mag, startYear, startMonth, endYear, endMonth, displayNature);
+    }, 1500);
   });
 });
